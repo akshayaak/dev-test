@@ -3,7 +3,7 @@ package com.test.api.exception;
 /**
  * The application level generic exception class
  * 
- * @author akshay
+ * @author Akshay
  *
  */
 public class UnexpectedApplicationException extends Exception {

@@ -12,6 +12,13 @@ import com.test.api.exception.UnexpectedApplicationException;
  */
 public interface ApiConnector {
 
-    public JSONArray connectAndFetchResponse(String[] parameters) throws UnexpectedApplicationException;
+    /**
+     * connects and fetch response
+     * 
+     * @param parameter
+     * @returns {@link JSONArray}
+     * @throws UnexpectedApplicationException
+     */
+    public JSONArray connectAndFetchResponse(String parameter) throws UnexpectedApplicationException;
 
 }

@@ -1,7 +1,7 @@
 package com.test.api.connector.factory;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.test.api.connector.ApiConnector;
 import com.test.api.connector.impl.GoEuroApiConnectorImpl;
@@ -16,17 +16,17 @@ import com.test.constant.ApiConnectorConstants;
  */
 public class APIConnectorFactory {
 
-    private static final Log LOG = LogFactory.getLog(APIConnectorFactory.class);
+    private static final Logger LOG = LoggerFactory.getLogger(APIConnectorFactory.class);
 
     /**
-     * fetches the underlying api connector class based on the api names passed.
+     * fetches the underlying api connector class based on the api names passed in.
      * 
      * @param apiName
      * @return {@link ApiConnector}
      * @throws UnexpectedApplicationException
      */
     public ApiConnector getAPIConnector(String apiName) throws UnexpectedApplicationException {
-        LOG.debug("retrive the relevant underlying api connector");
+        LOG.info("retrieve the relevant underlying api connector");
 
         if (ApiConnectorConstants.GO_EURO.equalsIgnoreCase(apiName))
 
